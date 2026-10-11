@@ -89,7 +89,7 @@ Vitest runs in jsdom with React Testing Library, user-event, and jest-dom assert
 
 ## Deployment
 
-Live portfolio URL will be added after deployment.
+Live portfolio: [https://nataliia-portfolio1.netlify.app](https://nataliia-portfolio1.netlify.app)
 
 ## Author
 
