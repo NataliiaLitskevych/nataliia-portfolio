@@ -35,7 +35,7 @@ The project uses Feature-Sliced Design (FSD) layers:
 - **pages** — composition of the portfolio home page.
 - **widgets** — page sections such as Hero, Skills, Projects, Contact, and navigation.
 - **features** — project-browser controls, state, and selectors.
-- **entities** — project, skill, and experience data, plus project-filtering logic.
+- **entities** — project and skill data, plus project-filtering logic.
 - **shared** — reusable UI components, hooks, utilities, and image assets.
 
 React Router serves the home page at `/`; section navigation uses native fragment links. Tests are colocated with the relevant components and logic, with shared setup in `src/test`.
@@ -61,12 +61,10 @@ vite.config.js
 
 ## Getting started
 
-Use a supported Node.js LTS release, version 22.12 or newer, and npm. This satisfies the installed Vite and jsdom requirements.
-
-Replace `<repository-url>` with the repository URL when available:
+Use Node.js 20.19+ (20.x), 22.12+ (22.x), or 24+, and npm. This matches the locked Vite and jsdom requirements.
 
 ```sh
-git clone <repository-url> portfolio-site
+git clone https://github.com/NataliiaLitskevych/nataliia-portfolio.git portfolio-site
 cd portfolio-site
 npm install
 npm run dev
