@@ -1,0 +1,28 @@
+.section {
+  // Clears the sticky header's 1rem inset and approximately 4.5rem height.
+  // The existing section padding provides additional breathing room.
+  scroll-margin-top: var(--section-scroll-offset, 6rem);
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+}
+
+.head {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent-strong);
+}
+
+.title {
+  margin-top: 0.75rem;
+  max-width: 48rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}

@@ -1,0 +1,53 @@
+export const skillGroups = [
+  {
+    title: 'Frontend',
+    accent: 'cool',
+    emphasis: 'primary',
+    items: [
+      'React.js',
+      'JavaScript (ES6+)',
+      'Redux Toolkit',
+      'React Router',
+      'HTML5',
+      'CSS3',
+      'SCSS',
+    ],
+    note: 'Core technologies I use to build modern React interfaces.',
+  },
+  {
+    title: 'Architecture & UI',
+    accent: 'cool',
+    emphasis: 'supporting',
+    items: [
+      'Feature-Sliced Design (FSD)',
+      'Responsive Design',
+      'Mobile First',
+      'REST APIs',
+      'GSAP',
+      'Figma-to-Code',
+    ],
+    note: 'Responsive interfaces, reusable structure, and thoughtful UI implementation.',
+  },
+  {
+    title: 'Testing & Development',
+    accent: 'cool',
+    emphasis: 'supporting',
+    items: [
+      'Git',
+      'GitHub',
+      'Vite',
+      'Vitest',
+      'React Testing Library',
+      'ESLint',
+      'CI/CD',
+    ],
+    note: 'Tools for code quality, testing, and reliable development workflows.',
+  },
+  {
+    title: 'Backend - Growing Skills',
+    accent: 'warm',
+    emphasis: 'secondary',
+    items: ['Node.js', 'Express.js', 'MongoDB'],
+    note: 'Expanding my backend knowledge alongside frontend development.',
+  },
+];

@@ -1,0 +1,259 @@
+.layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card,
+.detailCard {
+  border-radius: var(--radius-xl);
+}
+
+.cardPrimary {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.9));
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.cardSecondary {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.card {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 65px rgba(15, 23, 42, 0.09);
+}
+
+.cardActive {
+  border-color: rgba(11, 114, 156, 0.55);
+  background: linear-gradient(180deg, rgba(240, 249, 255, 0.97), rgba(232, 245, 252, 0.94));
+}
+
+.cardButton {
+  width: 100%;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  text-align: left;
+}
+
+.cardButton:focus-visible,
+.detailContent:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 3px;
+}
+
+.cardImageFrame,
+.detailImageFrame {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(14, 165, 233, 0.14);
+  border-radius: 1.4rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(245, 249, 252, 0.88));
+}
+
+.cardImageFrame {
+  min-height: 12.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.detailImageFrame {
+  min-height: 14rem;
+  margin-top: 1.25rem;
+}
+
+.cardImage,
+.detailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cardEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-strong);
+}
+
+.cardMeta,
+.detailLabel {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.cardTitle,
+.detailTitle {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.cardCopy,
+.detailCopy {
+  margin-top: 1rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.teamBadge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 248, 235, 0.95);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #8a5b00;
+}
+
+.detailCard {
+  padding: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+.detailInner {
+  min-height: 100%;
+}
+
+.detailBlock {
+  margin-top: 1.4rem;
+}
+
+.detailList {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.detailItem {
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardImageFrame {
+    min-height: 13.5rem;
+  }
+
+  .detailImageFrame {
+    min-height: 18rem;
+  }
+
+  .actionRow {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1160px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+    align-items: start;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardPrimary:first-child {
+    grid-column: auto;
+  }
+
+  .detailCard {
+    grid-column: auto;
+    position: sticky;
+    top: 6rem;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 7rem);
+    max-height: calc(100dvh - 7rem);
+  }
+
+  .detailInner {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .detailContent {
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(82, 97, 115, 0.5) transparent;
+  }
+
+  .detailContent::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .detailContent::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: rgba(82, 97, 115, 0.5);
+    background-clip: padding-box;
+  }
+
+  .actionRow {
+    flex-shrink: 0;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .detailImageFrame {
+    min-height: 20rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

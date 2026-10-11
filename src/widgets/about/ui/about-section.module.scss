@@ -1,0 +1,48 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.primaryCard,
+.secondaryCard {
+  padding: 1.75rem;
+  border-radius: var(--radius-xl);
+}
+
+.primaryCard {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.9));
+}
+
+.copy {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--color-muted);
+}
+
+.copy + .copy {
+  margin-top: 1.25rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-strong);
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+  }
+}
